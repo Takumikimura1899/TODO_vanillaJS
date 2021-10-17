@@ -12,5 +12,6 @@ taskSubmit.addEventListener('submit', (e) => {
   e.preventDefault();
   const task = taskValue.value;
   console.log(task);
-  addTasks(task);
+  task && addTasks(task);
+  taskValue.value = '';
 });
